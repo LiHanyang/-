@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/Resources">
+        <file>images/close.png</file>
+        <file>images/min.png</file>
+        <file>images/Button.jpg</file>
+        <file>images/close_hover.png</file>
+        <file>images/close_press.png</file>
+        <file>images/min_hover.bmp</file>
+        <file>images/min_press.bmp</file>
+        <file>images/block.png</file>
+        <file>images/pw_mid.png</file>
+        <file>images/pw_strong.png</file>
+        <file>images/pw_weak.png</file>
+        <file>images/delete.jpg</file>
+        <file>images/search.png</file>
+        <file>images/background.png</file>
+        <file>images/background.gif</file>
+        <file>images/block.ico</file>
+    </qresource>
+</RCC>
