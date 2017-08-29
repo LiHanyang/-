@@ -32,6 +32,17 @@ void modifyDialog::on_okButton_clicked()
         ui->lineEdit_3->clear();
         return;
     }
+    if(NULL == ui->lineEdit_2->text())
+    {
+        QMessageBox msgBox;
+        msgBox.setWindowFlags(Qt::FramelessWindowHint);
+        msgBox.setStyleSheet("background-color:rgb(193,213,250)");
+        msgBox.setText(tr("新密码不能为空！       "));
+        msgBox.exec();
+        ui->lineEdit_2->clear();
+        ui->lineEdit_3->clear();
+        return;
+    }
     if(ui->lineEdit_2->text() != checkPassword)
     {
         QMessageBox msgBox;

@@ -862,9 +862,9 @@ QPushButton#showPassword:pressed
   <widget class="QPushButton" name="modifyButton">
    <property name="geometry">
     <rect>
-     <x>430</x>
+     <x>420</x>
      <y>510</y>
-     <width>90</width>
+     <width>111</width>
      <height>30</height>
     </rect>
    </property>
