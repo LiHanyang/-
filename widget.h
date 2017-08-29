@@ -23,6 +23,7 @@
 #include "dialog.h"
 #include "msg.h"
 #include "checkdialog.h"
+#include "modifydialog.h"
 
 using namespace std;
 
@@ -67,6 +68,8 @@ private slots:
 
     void on_searchUrl_textChanged(const QString &arg1);
 
+    void on_modifyButton_clicked();
+
 private:
     void setWindow();
     void setUi();
@@ -85,6 +88,7 @@ private:
     Ui::Widget *ui;
     QString userAccount;
     QString userPassword;
+    QString newPassword;
     QStandardItemModel *accountItemModel;
     QStandardItemModel *rootItemModel;
     int rootCount;
@@ -96,14 +100,15 @@ private:
     OrCode orcWidget;
     QTimer *timer;
     int i;
-    QSystemTrayIcon* systemTray;
-    QAction* restore;
-    QAction* quit;
-    QMenu* menu;
+    QSystemTrayIcon *systemTray;
+    QAction *restore;
+    QAction *quit;
+    QMenu *menu;
 
     friend class Dialog;
     friend class Msg;
     friend class CheckDialog;
+    friend class modifyDialog;
 };
 
 #endif // WIDGET_H

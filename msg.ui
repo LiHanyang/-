@@ -38,6 +38,21 @@
      <height>30</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#okButton
+{
+	font: 25 9pt &quot;Microsoft YaHei&quot;;
+    border-image: url(:/Resources/images/Button.jpg);
+    border-radius:5px;
+}
+
+QPushButton#okButton:pressed
+{
+    border-image: url(:/Resources/images/Button.jpg);
+    padding-left:2px;
+    padding-top:2px;
+}</string>
+   </property>
    <property name="text">
     <string>确定</string>
    </property>
@@ -50,6 +65,21 @@
      <width>60</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#cancelButton
+{
+	font: 25 9pt &quot;Microsoft YaHei&quot;;
+    border-image: url(:/Resources/images/Button.jpg);
+    border-radius:5px;
+}
+
+QPushButton#cancelButton:pressed
+{
+    border-image: url(:/Resources/images/Button.jpg);
+    padding-left:2px;
+    padding-top:2px;
+}</string>
    </property>
    <property name="text">
     <string>取消</string>

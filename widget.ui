@@ -859,6 +859,43 @@ QPushButton#showPassword:pressed
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="modifyButton">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>510</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>10</pointsize>
+     <weight>3</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#modifyButton
+{
+	font: 25 10pt &quot;Microsoft YaHei&quot;;
+    border-image: url(:/Resources/images/Button.jpg);
+    border-radius:5px;
+}
+
+QPushButton#modifyButton:pressed
+{
+    border-image: url(:/Resources/images/Button.jpg);
+    padding-left:3px;
+    padding-top:3px;
+}</string>
+   </property>
+   <property name="text">
+    <string>修改用户密码</string>
+   </property>
+  </widget>
   <zorder>backgroundLabel</zorder>
   <zorder>exitButton</zorder>
   <zorder>rootTable</zorder>
@@ -889,6 +926,7 @@ QPushButton#showPassword:pressed
   <zorder>showPassword</zorder>
   <zorder>searchUrl</zorder>
   <zorder>label_10</zorder>
+  <zorder>modifyButton</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

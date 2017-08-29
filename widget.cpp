@@ -686,13 +686,14 @@ void Widget::on_searchCata_2_textChanged(const QString &arg1)
 
 void Widget::on_min1Button_clicked()
 {
-    this->hide();
-    systemTray->showMessage(QString("提示"), QString("程序已隐藏至托盘"));
+    this->showMinimized();
 }
 
 void Widget::on_close1Button_clicked()
 {
-    exit(0);
+    this->hide();
+    timer->stop();
+    systemTray->showMessage(QString("提示"), QString("程序已隐藏至托盘"));
 }
 
 void Widget::iconIsActived(QSystemTrayIcon::ActivationReason reason)
@@ -702,6 +703,8 @@ void Widget::iconIsActived(QSystemTrayIcon::ActivationReason reason)
     case QSystemTrayIcon::Trigger:
     {
         showNormal();
+        timer->setInterval(1);
+        timer->start();
         break;
     }
     default:
@@ -805,4 +808,18 @@ void Widget::on_searchUrl_textChanged(const QString &arg1)
     }
 
     ui->saveButton->setEnabled(false);
+}
+
+void Widget::on_modifyButton_clicked()
+{
+    modifyDialog modDialog;
+    modDialog.password = userPassword;
+    modDialog.exec();
+    if(NULL == modDialog.newPassword) return;
+    userPassword = modDialog.newPassword;
+    QString s;
+    QSqlQuery query;
+    s = QString("update user set passwd=='%1' where name=='%2' ").
+            arg(orcWidget.Code(userPassword)).arg(orcWidget.Code(userAccount));
+    query.exec(s);
 }

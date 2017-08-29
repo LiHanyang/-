@@ -6,7 +6,7 @@
 
 QT       += core gui
 QT += sql
-
+RC_ICONS = images/block.ico
 CONFIG += console
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -35,7 +35,8 @@ SOURCES += \
     orcode.cpp \
     msg.cpp \
     dialog.cpp \
-    checkdialog.cpp
+    checkdialog.cpp \
+    modifydialog.cpp
 
 HEADERS += \
         widget.h \
@@ -44,14 +45,16 @@ HEADERS += \
     orcode.h \
     msg.h \
     dialog.h \
-    checkdialog.h
+    checkdialog.h \
+    modifydialog.h
 
 FORMS += \
         widget.ui \
     dialog.ui \
     msg.ui \
     dialog.ui \
-    checkdialog.ui
+    checkdialog.ui \
+    modifydialog.ui
 
 RESOURCES += \
     resourse.qrc

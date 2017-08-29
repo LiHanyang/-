@@ -38,6 +38,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+   </property>
    <property name="text">
     <string>请重新输入密码：</string>
    </property>
@@ -51,6 +54,21 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#pushButton
+{
+	font: 25 9pt &quot;Microsoft YaHei&quot;;
+    border-image: url(:/Resources/images/Button.jpg);
+    border-radius:5px;
+}
+
+QPushButton#pushButton:pressed
+{
+    border-image: url(:/Resources/images/Button.jpg);
+    padding-left:2px;
+    padding-top:2px;
+}</string>
+   </property>
    <property name="text">
     <string>确认</string>
    </property>
@@ -63,6 +81,21 @@
      <width>81</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#pushButton_2
+{
+	font: 25 9pt &quot;Microsoft YaHei&quot;;
+    border-image: url(:/Resources/images/Button.jpg);
+    border-radius:5px;
+}
+
+QPushButton#pushButton_2:pressed
+{
+    border-image: url(:/Resources/images/Button.jpg);
+    padding-left:2px;
+    padding-top:2px;
+}</string>
    </property>
    <property name="text">
     <string>退出程序</string>

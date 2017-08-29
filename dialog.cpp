@@ -125,6 +125,20 @@ void Dialog::on_submitButton_clicked()
     QString uname = ui->newAccountEdit->text();
     QString upasswd = ui->newPasswordEdit->text();
     QString check = ui->checkPasswordEdit->text();
+
+    if(NULL == uname)
+    {
+        QMessageBox msgBox;
+        msgBox.setWindowFlags(Qt::FramelessWindowHint);
+        msgBox.setStyleSheet("background-color:rgb(193,213,250)");
+        msgBox.setText(tr("账号不能为空     "));
+        msgBox.exec();
+        ui->newAccountEdit->clear();
+        ui->newPasswordEdit->clear();
+        ui->checkPasswordEdit->clear();
+        return;
+    }
+
     QString s = QString("select * from user where name=='%1' ").arg(orcWidget.Code(uname));
     QSqlQuery query;
     query.exec(s);
@@ -134,6 +148,18 @@ void Dialog::on_submitButton_clicked()
         msgBox.setWindowFlags(Qt::FramelessWindowHint);
         msgBox.setStyleSheet("background-color:rgb(193,213,250)");
         msgBox.setText(tr("用户已存在！     "));
+        msgBox.exec();
+        ui->newPasswordEdit->clear();
+        ui->checkPasswordEdit->clear();
+        return;
+    }
+
+    if(NULL == upasswd)
+    {
+        QMessageBox msgBox;
+        msgBox.setWindowFlags(Qt::FramelessWindowHint);
+        msgBox.setStyleSheet("background-color:rgb(193,213,250)");
+        msgBox.setText(tr("密码不能为空     "));
         msgBox.exec();
         ui->newPasswordEdit->clear();
         ui->checkPasswordEdit->clear();
