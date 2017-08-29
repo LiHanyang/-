@@ -10,6 +10,7 @@ modifyDialog::modifyDialog(QWidget *parent) :
     ui->lineEdit->setEchoMode(QLineEdit::Password);
     ui->lineEdit_2->setEchoMode(QLineEdit::Password);
     ui->lineEdit_3->setEchoMode(QLineEdit::Password);
+    ui->okButton->setDefault(true);
 }
 
 modifyDialog::~modifyDialog()

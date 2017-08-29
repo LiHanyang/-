@@ -585,6 +585,22 @@ QPushButton#min2Button:pressed
   <zorder>min2Button</zorder>
   <zorder>label_7</zorder>
  </widget>
+ <tabstops>
+  <tabstop>accountEdit</tabstop>
+  <tabstop>passwordEdit</tabstop>
+  <tabstop>loginButton</tabstop>
+  <tabstop>exitButton</tabstop>
+  <tabstop>applyButton</tabstop>
+  <tabstop>newAccountEdit</tabstop>
+  <tabstop>newPasswordEdit</tabstop>
+  <tabstop>checkPasswordEdit</tabstop>
+  <tabstop>submitButton</tabstop>
+  <tabstop>cancelButton</tabstop>
+  <tabstop>min1Button</tabstop>
+  <tabstop>close1Button</tabstop>
+  <tabstop>min2Button</tabstop>
+  <tabstop>close2Button</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

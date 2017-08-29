@@ -23,7 +23,6 @@ void Msg::on_input_textChanged(const QString &arg1)
 void Msg::on_okButton_clicked()
 {
     trans = ui->input->text();
-    qDebug() << trans;
     close();
 
 }

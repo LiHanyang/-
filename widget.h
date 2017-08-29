@@ -65,9 +65,8 @@ private slots:
     void on_showPassword_clicked();
     void showCheckDialog();
     void iconIsActived(QSystemTrayIcon::ActivationReason reason);
-
+    void widgetActived();
     void on_searchUrl_textChanged(const QString &arg1);
-
     void on_modifyButton_clicked();
 
 private:

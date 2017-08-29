@@ -7,7 +7,7 @@
 QT       += core gui
 QT += sql
 RC_ICONS = images/block.ico
-CONFIG += console
+#CONFIG += console
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

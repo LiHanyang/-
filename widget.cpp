@@ -24,7 +24,7 @@ Widget::Widget(QWidget *parent) :
     systemTray->setIcon(QIcon(":/Resources/images/block.ico"));
     systemTray->setToolTip(QString("密码管理"));
     restore = new QAction(QString("恢复程序"), this);
-    connect(restore, SIGNAL(triggered()), this, SLOT(showNormal()));
+    connect(restore, SIGNAL(triggered()), this, SLOT(widgetActived()));
     quit = new QAction(QString("结束程序"), this);
     connect(quit, SIGNAL(triggered()), qApp, SLOT(quit()));
     menu = new QMenu(this);
@@ -696,6 +696,13 @@ void Widget::on_close1Button_clicked()
     systemTray->showMessage(QString("提示"), QString("程序已隐藏至托盘"));
 }
 
+void Widget::widgetActived()
+{
+    showNormal();
+    timer->setInterval(1);
+    timer->start();
+}
+
 void Widget::iconIsActived(QSystemTrayIcon::ActivationReason reason)
 {
     switch(reason)
@@ -723,7 +730,6 @@ void Widget::on_showPassword_clicked()
     {
         ui->passwordEdit->setEchoMode(QLineEdit::Normal);
     }
-
 }
 
 void Widget::showCheckDialog()
