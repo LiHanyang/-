@@ -6,6 +6,7 @@ CheckDialog::CheckDialog(QWidget *parent) :
     ui(new Ui::CheckDialog)
 {
     ui->setupUi(this);
+    ui->lineEdit->setEchoMode(QLineEdit::Password);
     this->setWindowFlags(Qt::FramelessWindowHint);
 }
 

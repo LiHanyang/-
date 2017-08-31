@@ -84,7 +84,7 @@ bool Widget::eventFilter(QObject *watched, QEvent *event)
                      {
                          QDateTime currentTime = QDateTime::currentDateTime();
                          QDateTime dateTime =
-                                 QDateTime::fromString(orcWidget.Code(query.value(7).toString()), "yyyy-MM-dd hh:mm:ss");
+                                 QDateTime::fromString(orcWidget.Code(query.value(7).toString()),"yyyy-MM-dd hh:mm:ss");
                          if(dateTime.addSecs(15).secsTo(currentTime) > 0)
                          {
                              QToolTip::showText(helpEvent->globalPos(),
@@ -124,6 +124,7 @@ void Widget::firstShow()
     ui->accountEdit->clear();
     ui->passwordEdit->clear();
     ui->urlEdit->clear();
+    ui->securityLabel->clear();
     rootCount = 0;
     QString s = QString("select * from user where name=='%1' and passwd=='%2' ").
             arg(orcWidget.Code(userAccount)).arg(orcWidget.Code(userPassword));
@@ -287,6 +288,7 @@ void Widget::on_rootDeleteButton_clicked()
         ui->accountEdit->clear();
         ui->passwordEdit->clear();
         ui->urlEdit->clear();
+        ui->securityLabel->clear();
     }
 
     ui->rootDeleteButton->setEnabled(false);
@@ -342,6 +344,7 @@ void Widget::on_accountDeleteButton_clicked()
         ui->accountEdit->clear();
         ui->passwordEdit->clear();
         ui->urlEdit->clear();
+        ui->securityLabel->clear();
     }
 
     ui->accountEdit->setEnabled(false);
@@ -364,6 +367,7 @@ void Widget::on_rootTable_clicked(const QModelIndex &index)
     ui->accountEdit->clear();
     ui->passwordEdit->clear();
     ui->urlEdit->clear();
+    ui->securityLabel->clear();
     ui->accountEdit->setEnabled(false);
     ui->passwordEdit->setEnabled(false);
     ui->urlEdit->setEnabled(false);
@@ -416,7 +420,7 @@ void Widget::checkTime(QSqlQuery &query, int row)
     QColor niceGreen(175, 255, 175, 175);
     QColor niceYellow(240, 255, 165);
     QColor niceOrange(255, 200, 100);
-    QColor niceRed(255, 0, 0, 125);
+    QColor niceRed(255, 0, 0, 100);
     switch(flag)
     {
     case 0:
@@ -475,6 +479,7 @@ void Widget::on_accountTable_clicked(const QModelIndex &index)
     ui->accountEdit->clear();
     ui->passwordEdit->clear();
     ui->urlEdit->clear();
+    ui->securityLabel->clear();
 
     if(0 != accountCount)
     {
@@ -634,6 +639,7 @@ void Widget::on_searchCata_1_textChanged(const QString &arg1)
     ui->accountEdit->clear();
     ui->passwordEdit->clear();
     ui->urlEdit->clear();
+    ui->securityLabel->clear();
     ui->saveButton->setEnabled(false);
     rootCount = 0;
     accountCount = 0;
@@ -669,6 +675,7 @@ void Widget::on_searchCata_2_textChanged(const QString &arg1)
     ui->accountEdit->clear();
     ui->passwordEdit->clear();
     ui->urlEdit->clear();
+    ui->securityLabel->clear();
     ui->saveButton->setEnabled(false);
     accountCount = 0;
     QString s;
@@ -749,6 +756,7 @@ void Widget::on_searchUrl_textChanged(const QString &arg1)
     ui->accountEdit->clear();
     ui->passwordEdit->clear();
     ui->urlEdit->clear();
+    ui->securityLabel->clear();
     ui->accountEdit->setEnabled(false);
     ui->passwordEdit->setEnabled(false);
     ui->urlEdit->setEnabled(false);
