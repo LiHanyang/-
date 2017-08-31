@@ -91,7 +91,9 @@ void Dialog::on_loginButton_clicked()
 
 void Dialog::on_applyButton_clicked()
 {
-
+    ui->newAccountEdit->clear();
+    ui->newPasswordEdit->clear();
+    ui->checkPasswordEdit->clear();
     int width = this->width();
     qDebug()<<width;
     if(width == 480)
@@ -149,6 +151,7 @@ void Dialog::on_submitButton_clicked()
         msgBox.setStyleSheet("background-color:rgb(193,213,250)");
         msgBox.setText(tr("用户已存在！     "));
         msgBox.exec();
+        ui->newAccountEdit->clear();
         ui->newPasswordEdit->clear();
         ui->checkPasswordEdit->clear();
         return;
