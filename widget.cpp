@@ -103,7 +103,7 @@ bool Widget::eventFilter(QObject *watched, QEvent *event)
 
 void Widget::setTimer()
 {
-    timer->setInterval(30000);
+    timer->setInterval(60000);
     connect(timer, SIGNAL(timeout()), this, SLOT(showCheckDialog()));
     timer->start();
 }

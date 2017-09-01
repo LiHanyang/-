@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     a.setStyle(QStyleFactory::create("Fusion"));
+	QApplication::addLibraryPath("./plugins");
 
     Dialog d;
 

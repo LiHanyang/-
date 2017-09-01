@@ -35,7 +35,7 @@ void CheckDialog::on_pushButton_clicked()
     }
     else
     {
-        timer->setInterval(30000);
+        timer->setInterval(60000);
         close();
     }
 }
